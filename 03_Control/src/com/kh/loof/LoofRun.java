@@ -8,8 +8,35 @@ public class LoofRun {
 
     public static void main(String[] args) {
         LoofEx l = new LoofEx();
-        l.method1();
+       // l.method1();
+        //l.method2();
+       // l.method3();
+        //l.method4();
+
+        LoofEx2 l2 = new LoofEx2();
+        //l2.while1();
+        //l2.while2();
+        //l2.while3();
+        l2.while4();
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void abc(){
         LoofEx l = new LoofEx();
