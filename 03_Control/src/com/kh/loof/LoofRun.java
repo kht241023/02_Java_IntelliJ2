@@ -17,7 +17,10 @@ public class LoofRun {
         //l2.while1();
         //l2.while2();
         //l2.while3();
-        l2.while4();
+        //l2.while4();
+
+        Menu  menu = new Menu();
+        menu.order(); //menu라는 변수명으로 주문 기능 가져오기
     }
 
 
