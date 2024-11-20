@@ -114,7 +114,7 @@ public class ArrayEx {
 
     // 배열을 이용해서 Stack과 Heap 비교
     public void method2(){
-        int x= 10; //Stack에 저장
+        int x = 10; //Stack에 저장
         int[] arr = new int[3]; // Heap 저장
         arr[0] = 100; // Heap 공간의 첫 번째 칸에 100을 저장
         /*
@@ -129,6 +129,69 @@ public class ArrayEx {
         *
         * */
     }
+
+    /*
+    * 정수 4개를 입력 받아
+    * 배열에 차례대로 대입 후
+    * 결과를 확인
+    * */
+    public void method3(){
+        // 배열 선언 + 할당
+        // int arr = new int[4];
+        // -> 자바에게 값을 담을 공간이 배열형태임을 미리 알려주지 않으면
+        // 에러 발생 반드시 int나 변수명 앞 뒤에 [] 붙여줘야함
+        // 단 int와 같은 자료형 앞은 붙이기 X
+        /*
+        기본자료형에 [] 붙었기 때문에 참조형 변수가 되는 것
+        int arr = new int[4]; (X)
+        []int arr = new int[4]; (X)
+        int[] arr = new int[4]; (O)
+        int []arr = new int[4]; (O)
+        int arr[] = new int[4]; (O)
+        배열이름.length : 배열 길이
+        * */
+
+        //for 문을 이용해서 i = 0, 1, 2, 3 확인
+        int []arr = new int[4];
+        for(int i=0; i<arr.length; i++) {
+            System.out.println(i + "번째 인덱스 위치");
+        }
+    }
+
+    // 배열 역순 출력
+    public void method4(){
+        int[] arr = {4, 6, 7, 3, 9};
+
+        System.out.print("배열 역순 출력 : "); //가로로 이어쓰기
+        // index 4번부터 0번까지만 출력
+        for(int i = arr.length -1; i>=0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+
+        System.out.println(arr);
+        // [I@5dfcfece 와 같은 주소 값 보임
+        //[ 배열시작뜻 I 정수형이라는의미 @뒤는 배열구분명칭 16진수 표기
+        System.out.println("arr 0번째 값 " + arr[0]);
+        System.out.println("arr 1번째 값 " + arr[1]);
+        System.out.println("arr 2번째 값 " + arr[2]);
+        System.out.println("arr 3번째 값 " + arr[3]);
+        System.out.println("arr 4번째 값 " + arr[4]);
+        //System.out.println("arr 5번째 값 " + arr[5]);
+        //Index 5 out of bounds for length 5
+        // index값이 0 ~ 4 까지 있기 때문에
+        // 없는 자리를 찾는다는 에러가 발생
+    }
+
+    // 문자열 배열 출력
+    public void method5(){
+        String[] days = {"월요일", "화요일","수요일","목요일","금요일","토요일","일요일"};
+
+        //요일들 모두 for문을 이용해서 출력하기
+        for(int i=0; i<days.length; i++) {
+            System.out.println(days[i]);
+        }
+    }
+
 }
 
 
