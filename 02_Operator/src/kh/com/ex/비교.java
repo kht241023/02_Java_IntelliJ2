@@ -32,6 +32,34 @@ public 비교 {
 *               * 상자 안에 든 물건이 같은가 *
 *
 *       **객체 : 어떤 객 몸 체,  어떤 물체
-* */
+*
+*
+*   .equalsIgnoreCase()
+*       대소문자를 구분하지 않고 문자열을 비교하는 메서드
+*       사용 예제 : 사용자가 yes, YES, YeS 를입력해도 동일하게 처리할 때 사용
+*
+*       String a = "Hello";
+*       String b = "hello";
+*
+*       //대소문자 구분없이 문자열이 일치하는지를 비교하는 것
+*       a.equalsIgnoreCase(b); //true
+*       b.equalsIgnoreCase("hi"); // false
+*
+*       .equals() .equalsIgnoreCase() 차이
+*       .equals() = 문자열 내용이 대소문자까지 정확히 일치해야함
+*                   아이디 비밀번호 확인할 때 사용
+*
+*       .equalsIgnoreCase() = 문자열 내용이 대소문자 구분 없이 일치로 간주
+*                   일정한 응답표기를 각자 다른 표현으로 진행할 때
+*
+*
+ * */
 
 }
+
+
+
+
+
+
+

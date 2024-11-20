@@ -20,7 +20,10 @@ public class LoofRun {
         //l2.while4();
 
         Menu  menu = new Menu();
-        menu.order(); //menu라는 변수명으로 주문 기능 가져오기
+        //menu.order(); //menu라는 변수명으로 주문 기능 가져오기
+
+        LoofDoWhile ldw = new LoofDoWhile();
+        ldw.method1();
     }
 
 
