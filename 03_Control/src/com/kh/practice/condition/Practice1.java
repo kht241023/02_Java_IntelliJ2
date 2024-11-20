@@ -17,6 +17,63 @@ public class Practice1 {
     메뉴 번호를 입력하세요 : 3
     조회 메뉴입니다.
     * */
+    public void method10() {
+        boolean isTrue = true;
+        while (isTrue) {
+            System.out.println("*** 실행할 기능을 선택하세요.*** ");
+            System.out.println("1. 메뉴 출력");
+            System.out.println("2. 짝수/홀수");
+            System.out.println("3. 합격/불합격");
+            System.out.println("4. 계절");
+            System.out.println("5. 로그인");
+            System.out.println("6. 권한 확인");
+            System.out.println("7. BMI");
+            System.out.println("8. 계산기");
+            System.out.println("9. P/F");
+            System.out.println("0. 종료");
+            System.out.print("선택 : ");
+
+            int choice = sc.nextInt(); //사용자가 번호를 선택하도록 입력하는 공간 작성
+            sc.nextLine();// 한 줄 공백이 있을 경우 날림처리
+            //선택한 번호에 따른 기능 실행
+            switch (choice) {
+                case 1:
+                    method1(); // public void method1()  작성된 코드 호출
+                    //외부에서 기능을 특정적으로 실행하지 않을 때는
+                    //내부에서 만 기능 불러오기를 진행할 때 기능명칭() 만 작성해주면 됨
+                    //단 main() 예외적으로 클래스파일명 변수명 = new 클래스파일명();
+                    //작성 후 기능 불러오기 가능
+                    break;
+                case 2:
+                    method2();
+                    break;
+                case 4:
+                    method4();
+                    break;
+                case 5:
+                    method5();
+                    break;
+                case 6:
+                    method6();
+                    break;
+                case 3:
+                case 7:
+                case 8:
+                case 9:
+                    System.out.println("기능 준비중입니다.");
+                    break;
+                case 0:
+                    System.out.println("프로그램을 종료합니다");
+                    isTrue = false;
+                    // while 옆에 true로 적힌 부분을 변수 isTrue에 담아서
+                    // 추후에 isTrue = false 로 표현해서 종료하게 만들기
+                    break;
+                default:
+                    System.out.println("잘못된 입력입니다. 다시 선택해주세요.");
+                    break;
+            }
+        }
+    }
 
     public void method1() {
         Scanner sc = new Scanner(System.in);
@@ -174,55 +231,31 @@ public class Practice1 {
         }
     }
 
-    public void method10() {
-        while (true) {
-            System.out.println("*** 실행할 기능을 선택하세요.*** ");
-            System.out.println("1. 메뉴 출력");
-            System.out.println("2. 짝수/홀수");
-            System.out.println("3. 합격/불합격");
-            System.out.println("4. 계절");
-            System.out.println("5. 로그인");
-            System.out.println("6. 권한 확인");
-            System.out.println("7. BMI");
-            System.out.println("8. 계산기");
-            System.out.println("9. P/F");
-            System.out.println("0. 종료");
-            System.out.print("선택 : ");
+    /*
+    메서드 명 : public void practice6(){}
+    사용자에게 관리자, 회원, 비회원 중 하나를 입력 받아 각 등급이 행할 수 있는 권한을 출력하세요.
+    단, 관리자는 회원관리, 게시글 관리, 게시글 작성, 게시글 조회, 댓글 작성이 가능하고
+    회원은 게시글 작성, 게시글 조회, 댓글 작성이 가능하고
+    비회원은 게시글 조회만 가능합니다.
+    */
+    public void method6() {
+        System.out.print("사용자 권한을 입력하세요.(관리자, 회원, 비회원) : ");
+        String role = sc.next();
+        if ("관리자".equals(role)) {
+            System.out.println("회원관리, 게시글 관리, 게시글 작성, 게시글 조회, 댓글 작성이 가능합니다.");
+        } else if ("회원".equals(role)) {
+            System.out.println("게시글 작성, 게시글 조회, 댓글 작성이 가능합니다.");
+        } else if ("비회원".equals(role)) {
+            System.out.println("게시글 조회만 가능합니다.");
 
-            int choice = sc.nextInt(); //사용자가 번호를 선택하도록 입력하는 공간 작성
-
-            //선택한 번호에 따른 기능 실행
-            switch (choice) {
-                case 1:
-                    method1(); // public void method1()  작성된 코드 호출
-                    //외부에서 기능을 특정적으로 실행하지 않을 때는
-                    //내부에서 만 기능 불러오기를 진행할 때 기능명칭() 만 작성해주면 됨
-                    //단 main() 예외적으로 클래스파일명 변수명 = new 클래스파일명();
-                    //작성 후 기능 불러오기 가능
-                    break;
-                case 2:
-                    method2();
-                    break;
-                case 4:
-                    method4();
-                    break;
-                case 5:
-                    method5();
-                    break;
-                case 3: case 6: case 7: case 8: case 9:
-                    System.out.println("기능 준비중입니다.");
-                    break;
-                case 0:
-                System.out.println("프로그램을 종료합니다");
-                // while 옆에 true로 적힌 부분을 변수 isTrue에 담아서
-                // 추후에 isTrue = false 로 표현해서 종료하게 만들기
-                    break;
-                default:
-                    System.out.println("잘못된 입력입니다. 다시 선택해주세요.");
-                    break;
-            }
+        } else {
+            System.out.println("잘못된 권한입니다.");
         }
+
+
     }
+
+
 }
 
 

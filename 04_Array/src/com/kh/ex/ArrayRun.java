@@ -9,5 +9,9 @@ public class ArrayRun {
         //ex.method4();
       //  ex.method5();
 
+        ArrayEx3 ex3 = new ArrayEx3();
+        ex3.method2();
+        ex3.method3();
+
     }
 }
