@@ -7,6 +7,9 @@ public class Account {
     private double balance;         //잔액
     private String password;        // 비밀번호
 
+    public String toString(){
+        return "name" + name + " accountNumber" + accountNumber + " balance" + balance + " password" + password;
+    }
     //Setter Alt + insert -> shift를 마지막선택까지 누르고 있으면 모두 선택
 
     public void setName(String name) {
