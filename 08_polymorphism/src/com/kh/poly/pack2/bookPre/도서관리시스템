@@ -1,0 +1,20 @@
+문제 설명
+1. Book(도서) 클래스
+도서의 제목(String title) 저자(String author) 가격(int price) 정보
+
+2. EBook(전자도서) 클래스
+Book 클래스만 상속
+전자책만의 추가 필드 파일크기(String fileSize)를 가짐
+
+3. PrintBook(종이책) 클래스
+Book 클래스만 상속
+종이책만의 추가 필드 배송비(int shippingCost)를 가짐
+
+4.BookRun 클래스
+전자책 정보:
+제목: 자바 프로그래밍, 저자: 홍길동, 가격: 20000원
+파일 크기: 15.5MB
+
+종이책 정보:
+제목: 파이썬 입문, 저자: 이영희, 가격: 18000원
+배송비: 3000원
