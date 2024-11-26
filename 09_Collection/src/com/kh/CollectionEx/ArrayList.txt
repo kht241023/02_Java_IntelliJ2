@@ -1,0 +1,22 @@
+
+자바에서 가장 널리 사용되는 컬렉션
+메서드를 통해 요소를 추가, 삭제, 검색, 정렬,변경할 수 있음
+
+
+주요 메서드(주요 기능)
+
+E = element 약자
+
+add(E e)             : 리스트 끝에 요소(=값)를 추가
+add(int index, E e)  : 특정 인덱스 위치에 요소(=값)을 추가
+remove(int index)    : 특정 인덱스의 요소 삭제
+remove(Object O)     : 지정된 요소를 삭제(첫 번째로 발견된 값만 삭제)
+set(int index, E e)  : 특정 인덱스의 요소를 새로운 값으로 변경
+get(int index)       : 특정 인덱스의 요소를 반환
+size()               : 리스트의 크기를 반환
+isEmpty()            : 리스트가 비어있는지 확인
+contains(Object O)   : 리스트에 특정 요소가 포함되어 있는지 확인
+indexOf(Object O)    : 지정된 요소의 첫 번째 인덱스를 반환
+clear()              : 리스트의 모든 요소를 삭제
+addAll(Collection c) : 다른 컬렉션의 모든 요소를 복사해서 추가
+subList(int, int)    : 특정 자리 범위 값을 추출해서 새로운리스트를 만듬
