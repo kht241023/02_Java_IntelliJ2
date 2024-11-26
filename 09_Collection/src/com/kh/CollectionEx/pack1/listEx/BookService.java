@@ -9,10 +9,10 @@ import java.util.ArrayList;
 //2) 추가 수정 삭제 검색 등 다양한 기능이 구현되어 있음
 public class BookService {
 
+
     // List : 자료를 순차적으로 나열한 자료 구로 (배열과 비슷)
     // - 인덱스가 존재함
     //      -> 인덱스로 순서가 구분되기 때문에 중복 데이터 저장 가능
-
     /**
      * List 사용해보기
      * */
@@ -41,7 +41,6 @@ public class BookService {
         // 리스트의 길이 : size() -> List에 저장된 요소(객체)의 개수를 반환
         System.out.println("list1에 저장된 값의 개수 : " + list1.size());
     }
-
     /**
      * List 에서 원하는 자료형만 넣을 수 있도록 자료형 제한 설정하기
      * */
@@ -65,6 +64,32 @@ public class BookService {
          
          System.out.println(list1);
          System.out.println(list1.size()); // 총 갯수 세기
+    }
+
+    // 책을 추가할 수 있도록
+    private ArrayList<Book> bookList = new ArrayList<>();
+    //한 번에 책이름, 저자, 가격을 저장하고 볼 수 있도록 설정
+
+   // 1. 책 추가하기 기능 만들자!
+    public void addBook(String title, String author, int price){
+
+     //Book b1 =  new Book("책제목","저자",가격);
+     // 하나씩 직접적으로 넣어줬다면
+     // 고객이 입력한 값을 전달받아서 저장하겠다 설정
+       Book b1 =  new Book(title,author,price);
+       bookList.add(b1);
+      // bookList.add(new Book(title,author,price)); 79
+      // 81번 째 줄은 79~ 80번 째 줄에 작성한 코드와 동일한 효과를 가진 코드를 작성
+
+       System.out.println(bookList);
+       System.out.println("책이 성공적으로 추가되었습니다.");
+    }
+
+    // 3번 저장된 책을 모두 확인하기
+    //                  Book   =      책제목 ,           저자,          가격         = 하나의 세트
+    // index 0번에 저장된 값들 =  {title='나는책이다.', author='KHT', price=30000}
+    public ArrayList<Book> getBookList(){
+        return bookList; //get 가지고 있는 모든 책 리스트를 호출해서 전달하기
     }
 }
 
