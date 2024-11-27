@@ -33,7 +33,7 @@ public class DrinkServiceRun {
                     break;
                 case 2:
                     //음료 조회공간 설정
-                    drinkService.addDrink();
+                    drinkService.allDrinks();
                     break;
                 case 3:
                     // 검색해서 조회
