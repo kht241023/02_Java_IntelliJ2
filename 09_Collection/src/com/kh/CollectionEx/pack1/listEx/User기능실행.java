@@ -32,6 +32,7 @@ public class User기능실행 {
                     break;
                 case 3:
                     //유저 삭제 기능 설정
+                    userStore.removeUser();
                     break;
                 case 4:
                     System.out.println("사용자 관리 프로그램을 종료합니다.");
