@@ -15,9 +15,13 @@ remove(Object O)     : 지정된 요소를 삭제(첫 번째로 발견된 값만
 set(int index, E e)  : 특정 인덱스의 요소를 새로운 값으로 변경
 get(int index)       : 특정 인덱스의 요소를 반환
 size()               : 리스트의 크기를 반환
+└────────────────────: 변수명으로 담을 경우 int 변수명 = 목록변수명.size();
 isEmpty()            : 리스트가 비어있는지 확인
+└────────────────────: 결과가 boolean 이기 때문에 boolean 변수명 = 목록변수명.isEmpty()
 contains(Object O)   : 리스트에 특정 요소가 포함되어 있는지 확인
+└────────────────────: 결과가 boolean 이기 때문에 boolean 변수명 = 목록변수명.contains(확인하고자 하는 값)
 indexOf(Object O)    : 지정된 요소의 첫 번째 인덱스를 반환
+└────────────────────: 결과가 정수형이기 때문에 int 변수명 = 목록변수명.indexOf(확인하고자 하는 값)
 clear()              : 리스트의 모든 요소를 삭제
 addAll(Collection c) : 다른 컬렉션의 모든 요소를 복사해서 추가
 subList(int, int)    : 특정 자리 범위 값을 추출해서 새로운리스트를 만듬
