@@ -1,7 +1,7 @@
 package com.kh.CollectionEx.listPre;
 
 public class Drink {
-    private String name;
+    String name;
     private int price;
 
     public Drink() {

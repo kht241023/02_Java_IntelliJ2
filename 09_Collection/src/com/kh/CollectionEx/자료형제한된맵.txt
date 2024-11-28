@@ -1,0 +1,15 @@
+
+맵 안에 지정된 자료형만 넣을 수 있음
+HashMap<키자료형,벨류자료형> 변수명 = new HashMap<>();
+HashMap<키자료형,벨류자료형> 변수명 = new HashMap<키자료형,벨류자료형>();
+HashMap<Key 자료형,Value 자료형> 변수명 = new HashMap<Key 자료형,Value 자료형>();
+
+
+1. 키 자료형 : String , Value 자료형 : String
+HashMap<String, String> map1 = new HashMap<String, String>();
+
+2. 키 자료형 : int , Value 자료형 : String
+HashMap<Integer, String> map1 = new HashMap<Integer, String>();
+
+3. 키 자료형 : String , Value 자료형 : int
+HashMap<String, Integer> map1 = new HashMap<String, Integer>();
