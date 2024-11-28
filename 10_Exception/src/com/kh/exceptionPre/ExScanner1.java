@@ -22,10 +22,11 @@ public class ExScanner1 {
         } catch (ArithmeticException e) {
            System.out.println("예외 발생 : " + e);
            System.out.println("0으로 숫자를 나눌 수 없습니다. ");
-           System.out.println("프로그램을 종료합니다.");
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("예기치 못한 문제가 발생했습니다.");
+
+        } finally { // catch에 관계없이 마지막에 무조건 실행하는 코드
             System.out.println("프로그램을 종료합니다.");
         }
     }
