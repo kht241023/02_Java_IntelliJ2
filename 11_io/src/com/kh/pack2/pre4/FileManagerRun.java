@@ -12,7 +12,7 @@ public class FileManagerRun {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         FileManager fileManager = new FileManager();
-        String path = System.getProperty("user.home") + "/Desktop";
+        String path = System.getProperty("user.home") + "/Desktop/";
 
         while (true) {
             System.out.println("\n메뉴:");

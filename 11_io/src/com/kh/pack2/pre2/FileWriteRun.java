@@ -9,10 +9,10 @@ public class FileWriteRun {
 
         FileWritePre fileWritePre = new FileWritePre();
         String path = System.getProperty("user.home") + "/Desktop/";
-        String fileName = "user.txt";
-
+        String fileName = "user";
+        String  확장자명칭 = ".txt";
         System.out.println("=== [" + fileName + "]생성 시작 ===");
-        fileWritePre.createTxt(path, fileName);
+        fileWritePre.createTxt(path, fileName + 확장자명칭);
 
         // writeTxt(path, fileName) 기능을 가져와서
         // user.txt 이름 성함 연락처 작성하고 저장하기
